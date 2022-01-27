@@ -78,7 +78,7 @@ async def pdisk_uploader(bot, message):
 #     v_len = len(v_id)
 #     v_id = v_id[1:v_len - 2]
 
-#     v_url = 'https://www.pdisks.com/share-video?videoid=' + v_id
+#     v_url = 'https://mdisk.me/convertor/16x9/' + v_id
 #     res = [str, v_url]
 #     return res
 
