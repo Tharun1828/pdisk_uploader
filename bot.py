@@ -78,7 +78,7 @@ async def pdisk_uploader(bot, message):
 #     v_len = len(v_id)
 #     v_id = v_id[1:v_len - 2]
 
-#     v_url = 'https://mdisk.me/convertor/16x9/' + v_id
+#     v_url = 'https://mdisk.me/convertor/16x9/x54jz2' + v_id
 #     res = [str, v_url]
 #     return res
 
@@ -97,7 +97,7 @@ async def pdisk_uploader(bot, message):
 #     data = dict(data)
 #     print(data)
 #     v_id = data['data']['item_id']
-#     v_url = 'https://mdisk.me/convertor/' + v_id
+#     v_url = 'https://mdisk.me/convertor/16x9/x54jz2' + v_id
 #     return (v_url)
 
 async def get_pv_id(url):
@@ -112,7 +112,7 @@ async def pdisk_up(link):
     if ('Mdisk' in link or 'wslinker' in link or 'cdinks' in link or 'kuklink' in link or 'kofilink' in link or 'cofilink' in link or 'bit' in link or 'vdshort' in link or link in 'vidrivers' or 'dplinks' in link):
       item_id = await get_pv_id(link)
       res = requests.get('http://linkapi.net/open/clone_item?item_id='+ item_id +'&api_key=' + PDISK_API_KEY)
-      v_url = 'https://mdisk.me/convertor/' + dict(res.json())['data']['item_id']
+      v_url = 'https://mdisk.me/convertor/16x9/x54jz2' + dict(res.json())['data']['item_id']
     else:
       await bot.send_message(f'pdiisk is under upgrade wait for new updates... contact me @Sk_Media_Official')
       return
