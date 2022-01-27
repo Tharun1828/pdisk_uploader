@@ -92,7 +92,7 @@ async def pdisk_uploader(bot, message):
 #         title_new = os.path.basename(title_new.path)
 #         title_pdisk = '@' + CHANNEL +' '+ title_new
 #     res = requests.get(
-#         'http://linkapi.net/open/create_item?link_type=link&content_src=' + link + '&source=2000&cover_url='+THUMB_URL+'&api_key=' + PDISK_API_KEY + '&dir_id=0&title=' + title_pdisk + '&description=Join_' + CHANNEL + '_for_more_like_this')
+#         'https://mdisk.me/convertor/16x9/' + link + '&source=2000&cover_url='+THUMB_URL+'&api_key=' + PDISK_API_KEY + '&dir_id=0&title=' + title_pdisk + '&description=Join_' + CHANNEL + '_for_more_like_this')
 #     data = res.json()
 #     data = dict(data)
 #     print(data)
@@ -111,7 +111,7 @@ async def get_pv_id(url):
 async def pdisk_up(link):
     if ('Mdisk' in link or 'wslinker' in link or 'cdinks' in link or 'kuklink' in link or 'kofilink' in link or 'cofilink' in link or 'bit' in link or 'vdshort' in link or link in 'vidrivers' or 'dplinks' in link):
       item_id = await get_pv_id(link)
-      res = requests.get('http://linkapi.net/open/clone_item?item_id='+ item_id +'&api_key=' + PDISK_API_KEY)
+      res = requests.get('https://mdisk.me/convertor/16x9/'+ item_id +'&api_key=' + PDISK_API_KEY)
       v_url = 'https://mdisk.me/convertor/16x9/x54jz2' + dict(res.json())['data']['item_id']
     else:
       await bot.send_message(f'pdiisk is under upgrade wait for new updates... contact me @Sk_Media_Official')
@@ -163,7 +163,7 @@ async def remove_username(new_List):
 
 async def addFooter(str):
     footer = """
-⭐️JOIN CHANNEL ➡️ t.me/""" + CHANNEL
+⭐️JOIN CHANNEL ➡️ @/""" + CHANNEL
     return str + footer
 
 bot.run()
